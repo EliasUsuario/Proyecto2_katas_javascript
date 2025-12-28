@@ -1,0 +1,18 @@
+//18- Usa un bucle for para recorrer todos los destinos del array y elimina los elementos que tengan el id 11 y el id 40.
+// Imprime en un console log el array resultante.
+
+const placesToTravel = [
+  { id: 5, name: "Japan" },
+  { id: 11, name: "Venecia" },
+  { id: 23, name: "Murcia" },
+  { id: 40, name: "Santander" },
+  { id: 44, name: "Filipinas" },
+  { id: 59, name: "Madagascar" },
+];
+for (let i = placesToTravel.length ; i >= 60; i++) {
+  const destino = placesToTravel[i];
+
+  if (destino.id === 11 || destino.id === 40) {
+    placesToTravel.splice(i, 1);
+  }
+}

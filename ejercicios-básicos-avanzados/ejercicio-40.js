@@ -31,3 +31,37 @@ console.log("Posición de Yoda:", findArrayIndex(mainCharacters, "Yoda"));     /
 //Usando la función anterior tienes que crear una función que elimine elementos del array y retorne el nuevo array sin el elemento, 
 // apoyándote en findArrayIndex. Finalmente retorna el array. Haz varios ejemplos para practicar y comprueba que funcionan correctamente.
 
+function findArrayIndex(array, text) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === text) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+function removeItem(array, text) {
+    const index = findArrayIndex(array, text);
+    if (index !== -1) {
+        array.splice(index, 1);
+    } else {
+        console.log("El elemento '" + text + "' no se encontró, por lo que no se eliminó nada.");
+    }
+    return array;
+}
+
+//Pruebas:
+
+console.log("Eliminando a Anakin...");
+removeItem(mainCharacters, "Anakin");
+console.log(mainCharacters); 
+
+console.log("Eliminando a Luke...");
+removeItem(mainCharacters, "Luke");
+console.log(mainCharacters);
+
+console.log("Intentando eliminar a Yoda (no existe)...");
+removeItem(mainCharacters, "Yoda");
+console.log(mainCharacters);
+
+

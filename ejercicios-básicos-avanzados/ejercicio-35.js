@@ -14,6 +14,22 @@ const mutants = [
   { name: 'Nightcrawler', power: 'teleportation' }
 ];
 
-function findMutantByPower(mutants, power) {
-  // insert code
+function findMutantByPower(mutan, power) {
+  const encontrados = [];
+  for (const m of mutan) {
+    if (m.power === power) {
+      encontrados.push(m.name);
+    }
+  }
+  if (encontrados.length > 0) {
+    return "Mutante encontrado con el poder " + power + ": " + encontrados.join(", ") + ".";
+  } else {
+    return "No se encontró ningún mutante con el poder " + power + ".";
+  }
 }
+
+// Pruebas:
+console.log(findMutantByPower(mutants, "magnetism"));
+console.log(findMutantByPower(mutants, "telepathy"));
+console.log(findMutantByPower(mutants, "regeneration"));
+console.log(findMutantByPower(mutants, "fuerza"));

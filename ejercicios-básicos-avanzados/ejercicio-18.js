@@ -9,10 +9,11 @@ const placesToTravel = [
   { id: 44, name: "Filipinas" },
   { id: 59, name: "Madagascar" },
 ];
-for (let i = placesToTravel.length ; i >= 60; i++) {
+for (let i = placesToTravel.length - 1; i >= 0; i--) {
   const destino = placesToTravel[i];
 
   if (destino.id === 11 || destino.id === 40) {
     placesToTravel.splice(i, 1);
   }
 }
+console.log(placesToTravel);

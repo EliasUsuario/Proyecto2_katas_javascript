@@ -63,7 +63,7 @@ document.body.appendChild(botonBorrar);
 botonBorrar.addEventListener('click', () => {
     const seleccionDivs = document.querySelectorAll('[data-function="printHere"] div');
     
-    // Actualización y eliminación del último divs
+    // Actualización y eliminación del último div.
     if (seleccionDivs.length > 0) {
         seleccionDivs[seleccionDivs.length - 1].remove();
     }

@@ -32,14 +32,13 @@ console.log(fusion); //comprobación de que la fusión es correcta
 //2.5 Dado el siguiente array. Crear una copia de él eliminando la posición 2 pero sin editar el array inicial. De nuevo, usando spread operatos.
 const colors = ['rojo', 'azul', 'amarillo', 'verde', 'naranja'];
 
-
 const sinAmarillo = [
   ...colors.slice(0, 2), // Copia 'rojo' y 'azul'
   ...colors.slice(3)    // Copia 'verde' y 'naranja'
 ];
 
 console.log(sinAmarillo); // Resultado: ['rojo', 'azul', 'verde', 'naranja']
-console.log(colors); // Comprobamos que el original sigue intacto
+console.log(colors); // Comprobación que el original sigue intacto.
 
 
 

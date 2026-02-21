@@ -53,11 +53,10 @@ const filteredStreamers = streamers3
         gameMorePlayed: streamer3.gameMorePlayed.toUpperCase() 
       };
     }
-    return streamer;
+    return streamers3;
   });
 
 console.log(filteredStreamers);
-
 
 
 
